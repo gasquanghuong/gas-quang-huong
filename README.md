@@ -2,6 +2,10 @@
 
 Website tĩnh SEO Local (Google Search + Google Maps) cho **Đại lý Gas Quang Hương** — đại lý gas, giao gas tận nhà, sửa chữa bếp gas, bán bếp gas và thiết bị gas tại Đắk Lắk.
 
+- **Website:** https://gasquanghuong.github.io/gas-quang-huong/
+- **Repo:** https://github.com/gasquanghuong/gas-quang-huong
+- **Google (chia sẻ):** https://share.google/NA8E4Lkim4UjjeIIt
+
 - **Công nghệ:** HTML/CSS/JS thuần + script build bằng Node (zero dependency, không npm install).
 - **Deploy:** GitHub Pages (miễn phí, không cần domain riêng).
 - **Không có:** backend, database, API key, dịch vụ trả phí.
