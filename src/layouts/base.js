@@ -15,15 +15,35 @@ export function renderPage(page) {
   const canonicalUrl = canonical(page.path);
   const fullTitle = page.title || `${site.name} — ${site.tagline}`;
 
-  const ogImage = site.ogImage
-    ? `\n  <meta property="og:image" content="${site.ogImage}">`
-    : '';
+  // og:image: chuẩn hoá về URL tuyệt đối nếu config để đường dẫn tương đối.
+  const ogImage = !site.ogImage
+    ? ''
+    : site.ogImage.startsWith('http')
+      ? site.ogImage
+      : canonical(site.ogImage);
+  const ogImageTag = ogImage ? `\n  <meta property="og:image" content="${ogImage}">` : '';
+  const twitterImageTag = ogImage ? `\n  <meta name="twitter:image" content="${ogImage}">` : '';
 
   const crumbs = page.breadcrumbLabel
     ? `\n${breadcrumbs(page.breadcrumbLabel, page.path)}`
     : '';
 
-  const extraLd = (page.extraJsonLd || [])
+  // BreadcrumbList JSON-LD — chỉ khi trang có breadcrumbLabel (không nhân đôi).
+  const breadcrumbLd = page.breadcrumbLabel
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: site.name, item: canonical('/') },
+            // breadcrumbLabel trong HTML đã escape & -> khôi phục ký tự gốc cho schema
+            { '@type': 'ListItem', position: 2, name: page.breadcrumbLabel.replace(/&amp;/g, '&'), item: canonicalUrl },
+          ],
+        },
+      ]
+    : [];
+
+  const extraLd = [...breadcrumbLd, ...(page.extraJsonLd || [])]
     .map((d) => `\n  <script type="application/ld+json">\n${JSON.stringify(d, null, 2)}\n  </script>`)
     .join('');
 
@@ -42,9 +62,9 @@ export function renderPage(page) {
   <meta property="og:locale" content="vi_VN">
   <meta property="og:title" content="${escapeHtml(fullTitle)}">
   <meta property="og:description" content="${escapeHtml(page.description)}">
-  <meta property="og:url" content="${canonicalUrl}">${ogImage}
-  <meta name="twitter:card" content="summary">
-  <link rel="icon" href="${url('/logo.png')}" type="image/png">
+  <meta property="og:url" content="${canonicalUrl}">${ogImageTag}
+  <meta name="twitter:card" content="summary">${twitterImageTag}
+  <link rel="icon" href="${url('/favicon.svg')}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="${url('/logo.png')}">
   <link rel="stylesheet" href="${url('/styles.css')}">
   <script type="application/ld+json">
@@ -53,7 +73,7 @@ ${localBusinessJsonLd()}
 </head>
 <body>
 ${header(page.path)}
-<main id="main">${crumbs}
+<main id="main" tabindex="-1">${crumbs}
 ${page.body}
 </main>
 ${footer()}

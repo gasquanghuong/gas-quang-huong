@@ -24,7 +24,9 @@ export function phoneList(cls = 'phone-list') {
  */
 export function mapsBtn(label = 'Xem bản đồ', { cls = 'btn btn--outline' } = {}) {
   if (site.googleMapsUrl) {
-    return `<a class="${cls}" href="${site.googleMapsUrl}" target="_blank" rel="noopener noreferrer" data-cta="map">${label}</a>`;
+    // Escape & trong href (URL chứa ?api=1&query=...)
+    const href = site.googleMapsUrl.replace(/&/g, '&amp;');
+    return `<a class="${cls}" href="${href}" target="_blank" rel="noopener noreferrer" data-cta="map">${label}</a>`;
   }
   return `<a class="${cls}" href="${url('/lien-he/#ban-do')}" data-cta="map">${label}<span class="btn__note"> (bản đồ đang cập nhật)</span></a>`;
 }

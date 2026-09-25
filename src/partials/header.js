@@ -6,7 +6,7 @@ export const navItems = [
   { href: '/', label: 'Trang chủ' },
   { href: '/giao-gas-tan-nha/', label: 'Giao gas tận nhà' },
   { href: '/sua-chua-bep-gas/', label: 'Sửa chữa bếp gas' },
-  { href: '/bep-gas-thiet-bi-gas/', label: 'Bếp gas & thiết bị gas' },
+  { href: '/bep-gas-thiet-bi-gas/', label: 'Bếp gas &amp; thiết bị gas' },
   { href: '/lien-he/', label: 'Liên hệ' },
 ];
 

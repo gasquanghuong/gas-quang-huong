@@ -86,28 +86,28 @@ export default {
       <h2 class="section__title">Quy trình kiểm tra và sửa chữa</h2>
       <p class="section__intro">Mỗi ca sửa đều đi từ mô tả lỗi của khách hàng đến kiểm tra thực tế, rồi mới tiến hành thay thế phụ kiện.</p>
     </div>
-    <div class="steps">
-      <div class="step">
+    <ol class="steps">
+      <li class="step">
         <span class="step__num">1</span>
         <h3 class="step__title">Tiếp nhận và mô tả lỗi</h3>
         <p class="step__text">Bạn gọi điện cho Đại lý Gas Quang Hương và mô tả biểu hiện của bếp: lỗi xảy ra từ khi nào, có mùi gas không, bếp còn đánh lửa không.</p>
-      </div>
-      <div class="step">
+      </li>
+      <li class="step">
         <span class="step__num">2</span>
         <h3 class="step__title">Kiểm tra thiết bị</h3>
         <p class="step__text">Kỹ thuật viên kiểm tra các bộ phận liên quan của bếp để xác định lỗi thuộc phần nào của thiết bị.</p>
-      </div>
-      <div class="step">
+      </li>
+      <li class="step">
         <span class="step__num">3</span>
         <h3 class="step__title">Thông báo lỗi và phương án</h3>
         <p class="step__text">Cửa hàng nêu rõ lỗi phát hiện được và phương án xử lý, bao gồm việc thay thế bộ phận phù hợp với model bếp đang dùng.</p>
-      </div>
-      <div class="step">
+      </li>
+      <li class="step">
         <span class="step__num">4</span>
         <h3 class="step__title">Sửa chữa và thử lại</h3>
         <p class="step__text">Sau khi sửa xong, bếp được thử lại để kiểm tra đánh lửa và ngọn lửa trước khi bàn giao cho khách.</p>
-      </div>
-    </div>
+      </li>
+    </ol>
   </div>
 </section>
 

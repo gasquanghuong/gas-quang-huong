@@ -42,6 +42,7 @@ Website tĩnh SEO Local (Google Search + Google Maps) cho **Đại lý Gas Quang
 ```bash
 node build.js            # build vào dist/
 node build.js --serve    # build + xem tại http://localhost:4321/<base-path>/
+node build.js --site-url "https://user.github.io"   # (tuỳ chọn) ghi đè siteUrl cho canonical/sitemap
 ```
 
 ## Hướng dẫn deploy lên GitHub Pages
@@ -71,12 +72,12 @@ git push -u origin main
 Sửa `site.config.js`:
 
 ```js
-siteUrl: 'https:<github-username>.github.io',   // ← https:// + username thật
+siteUrl: 'https://<github-username>.github.io',   // ← https:// + username thật
 basePath: '/<repository-name>/',                // ← / + tên repo thật
 ```
 
 - `basePath` **bắt đầu và kết thúc bằng `/`** (ví dụ `'/gas-quang-huong/'`) — sai chỗ này sẽ lỗi CSS/routing.
-- Workflow có truyền `--base "/<tên-repo>/"` khi build nên `basePath` luôn đúng theo tên repo, nhưng **`siteUrl` phải tự cập nhật** (dùng cho canonical, og:url, sitemap).
+- Workflow có truyền `--base "/<tên-repo>/"` và `--site-url "https://<user>.github.io"` khi build nên `basePath`/`siteUrl` luôn đúng theo tên repo + chủ sở hữu (dùng cho canonical, og:url, sitemap); vẫn kiểm tra lại trước khi deploy.
 - Build lại local để kiểm tra: `node build.js`.
 
 ## Sửa thông tin doanh nghiệp
@@ -130,6 +131,7 @@ Hiện tại **không dùng ảnh nào** (tránh ảnh giả). Khi có ảnh th�
 - [ ] Mở website thật, kiểm tra: title, mô tả, link nội bộ, không có link gãy
 - [ ] NỘI DUNG chưa xác nhận (giá, khu vực giao, chính sách) vẫn là TODO — **không tự bịa**
 - [ ] Submit sitemap trên Google Search Console
+- [ ] Lưu ý: `https://gasquanghuong.github.io/robots.txt` (gốc domain, project Pages) là 404 → **bắt buộc submit sitemap trực tiếp** ở Search Console (xem mục robots.txt ở cuối README)
 - [ ] Kiểm tra Google Rich Results Test (`https://search.google.com/test/rich-results`) — chỉ cảnh báo thiếu địa chỉ là bình thường khi chưa có dữ liệu xác nhận
 - [ ] Đối chiếu NAP với Google Business Profile
 

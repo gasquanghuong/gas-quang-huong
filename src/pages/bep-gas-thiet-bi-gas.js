@@ -6,7 +6,7 @@ export default {
   title: 'Bếp gas và thiết bị gas tại Đắk Lắk — Đại lý Gas Quang Hương',
   description:
     'Bếp gas và thiết bị gas tại Đắk Lắk: cách chọn bếp gas, van an toàn, dây dẫn và phụ kiện dùng an toàn. Đại lý Gas Quang Hương tư vấn, báo giá.',
-  breadcrumbLabel: 'Bếp gas & thiết bị gas',
+  breadcrumbLabel: 'Bếp gas &amp; thiết bị gas',
   body: `
 <section class="page-hero">
   <div class="container">
@@ -130,7 +130,7 @@ export default {
       <h2 class="section__title">Cần tư vấn trước khi mua?</h2>
       <p class="section__intro">Gọi cho ${site.name} để hỏi về bếp gas, phụ kiện và cách lắp đặt phù hợp với bếp của bạn.</p>
     </div>
-    <div class="hero__actions">${callBtn('Gọi tư vấn & báo giá')}${mapsBtn('Xem bản đồ')}</div>
+    <div class="hero__actions">${callBtn('Gọi tư vấn &amp; báo giá')}${mapsBtn('Xem bản đồ')}</div>
     ${phoneList()}
   </div>
 </section>

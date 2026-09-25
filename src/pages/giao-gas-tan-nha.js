@@ -23,28 +23,28 @@ export default {
       <h2 class="section__title">Đặt gas tận nhà cần làm gì</h2>
       <p class="section__intro">Quy trình đặt bình gas diễn ra qua điện thoại, bạn không cần đến cửa hàng nếu muốn giao tận nơi.</p>
     </div>
-    <div class="steps">
-      <div class="step">
+    <ol class="steps">
+      <li class="step">
         <span class="step__num">1</span>
         <h3 class="step__title">Gọi điện đặt bình</h3>
         <p class="step__text">Liên hệ một trong ba số của Đại lý Gas Quang Hương, cửa hàng ghi nhận yêu cầu đổi bình của bạn ngay trong lúc trò chuyện.</p>
-      </div>
-      <div class="step">
+      </li>
+      <li class="step">
         <span class="step__num">2</span>
         <h3 class="step__title">Cung cấp thông tin</h3>
         <p class="step__text">Cho biết loại bình đang dùng, số lượng, địa chỉ cần giao và thời gian bạn tiện nhận bình.</p>
-      </div>
-      <div class="step">
+      </li>
+      <li class="step">
         <span class="step__num">3</span>
         <h3 class="step__title">Cửa hàng giao đến và đổi bình</h3>
         <p class="step__text">Nhân viên mang bình gas đến nhà, thay bình cũ sang bình mới và lắp đặt lại cho bếp sử dụng bình đó.</p>
-      </div>
-      <div class="step">
+      </li>
+      <li class="step">
         <span class="step__num">4</span>
         <h3 class="step__title">Kiểm tra và thanh toán</h3>
         <p class="step__text">Bạn kiểm tra bình trước khi nhận, sau đó thanh toán theo thỏa thuận giữa hai bên.</p>
-      </div>
-    </div>
+      </li>
+    </ol>
   </div>
 </section>
 

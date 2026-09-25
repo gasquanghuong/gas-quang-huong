@@ -17,7 +17,7 @@ const services = [
   {
     href: '/bep-gas-thiet-bi-gas/',
     icon: '🍳',
-    title: 'Bếp gas & thiết bị gas',
+    title: 'Bếp gas &amp; thiết bị gas',
     text: 'Bán bếp gas và các thiết bị, phụ kiện đi kèm cho gia đình, cửa hàng. Liên hệ để biết hàng hiện có.',
   },
 ];

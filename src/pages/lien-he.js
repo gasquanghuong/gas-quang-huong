@@ -52,10 +52,10 @@ export default {
   <div class="container narrow">
     <div class="section__head">
       <h2 class="section__title">Bản đồ</h2>
-      <p class="section__intro">Nút “Xem bản đồ” trên trang trỏ tới khu vực này. Khi đã có link Google Maps của cửa hàng, bản đồ sẽ hiển thị ngay tại đây.</p>
+      <p class="section__intro">Bản đồ cửa hàng trên Google Maps — các nút “Xem bản đồ” mở Google Maps ở tab mới.</p>
     </div>
     <div class="map-embed">
-      <iframe src="${site.mapsEmbed}" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Bản đồ ${site.name}"></iframe>
+      <iframe src="${site.mapsEmbed.replace(/&/g, '&amp;')}" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Bản đồ ${site.name}"></iframe>
     </div>
   </div>
 </section>
