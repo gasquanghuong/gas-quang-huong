@@ -54,7 +54,9 @@ export default {
       <h2 class="section__title">Bản đồ</h2>
       <p class="section__intro">Nút “Xem bản đồ” trên trang trỏ tới khu vực này. Khi đã có link Google Maps của cửa hàng, bản đồ sẽ hiển thị ngay tại đây.</p>
     </div>
-    <div class="map-placeholder">TODO: nhemsp Google Maps iframe hoặc thêm link Google Maps Place URL vào site.config.js (googleMapsUrl)</div>
+    <div class="map-embed">
+      <iframe src="${site.mapsEmbed}" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Bản đồ ${site.name}"></iframe>
+    </div>
   </div>
 </section>
 

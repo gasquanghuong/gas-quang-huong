@@ -34,10 +34,11 @@ export const site = {
   // ------------------------------------------------------------
   address: '',        // Ví dụ khi có: '123 XYZ, tỉnh Đắk Lák' — chỉ ghi khi chủ cửa hàng xác nhận
   openingHours: '',   // Ví dụ khi có: 'Thứ 2 - Chủ nhật: 7:00 - 20:00'
-  googleMapsUrl: '',  // Link Google Maps (Place URL) của cửa hàng — lấy từ Google Business Profile
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=12.7051445,108.3192169', // Link Google Maps (lấy từ embed người dùng cung cấp)
+  mapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.126820713302!2d108.3192169!3d12.705144599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171e50e24477cd9%3A0x88d243d7457d89b2!2zJDhuqFpIGzDvSBHYXMgUXVhbmcgSMawxqFuZw!5e0!3m2!1sen!2s!4v1790311208369!5m2!1sen!2s', // URL nhúng Google Maps iframe
   ogImage: '',        // Ảnh đại diện 1200x630 (URL tuyệt đối) khi đã có ảnh thật
-  latitude: null,     // TODO: tọa độ từ Google Business Profile (để null nếu chưa có)
-  longitude: null,
+  latitude: 12.7051445,     // Tọa độ lấy từ embed Google Maps đã cung cấp
+  longitude: 108.3192169,
 };
 
 /** Ghép basePath vào một đường dẫn nội bộ ('/styles.css' -> '/repo/styles.css'). */
