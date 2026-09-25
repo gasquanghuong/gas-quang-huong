@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     q: 'Địa chỉ và giờ mở cửa là gì?',
-    a: `<p>Thông tin địa chỉ và giờ mở cửa đang được cập nhật — xem mục Liên hệ bên dưới hoặc gọi trực tiếp cho cửa hàng để hỏi.<br><span class="todo">TODO — điền địa chỉ và giờ mở cửa đã xác nhận (khớp Google Business Profile)</span></p>`,
+    a: `<p>Cửa hàng ở <strong>147 Trần Hưng Đạo, Krông Pắc, Đắk Lắk 632700</strong> (huyện Krông Pắc) và <strong>Mở cửa cả ngày (thứ 2 – chủ nhật)</strong>. Thông tin này lấy từ trang Google Maps của cửa hàng — cần xác nhận gì thêm thì gọi trực tiếp.</p>`,
   },
 ];
 
@@ -108,7 +108,7 @@ export default {
       <span class="badge">📍 Khu vực Đắk Lắk</span>
       <span class="badge">🛠️ Giao gas · Sửa bếp · Bán bếp gas</span>
     </div>
-    <div class="hero__figure"><div><span aria-hidden="true">🏪</span>TODO: thay bằng ảnh thực tế cửa hàng</div></div>
+    <div class="hero__figure"><div><span aria-hidden="true">🏪</span></div></div>
   </div>
 </section>
 
@@ -151,7 +151,6 @@ export default {
         )
         .join('\n      ')}
     </div>
-    <p><span class="todo">TODO — bổ sung bảng giá sản phẩm khi chủ cửa hàng xác nhận (hiện tại liên hệ để được báo giá).</span></p>
     <p>${callBtn('Gọi hỏi hàng', { cls: 'btn btn--outline' })}</p>
     <p><a class="btn btn--ghost" href="${url('/bep-gas-thiet-bi-gas/')}">Xem chi tiết bếp gas &amp; thiết bị gas</a></p>
   </div>
@@ -185,8 +184,7 @@ export default {
       <h2 class="section__title">Giao gas tại ${site.province}</h2>
       <p class="section__intro">Cửa hàng nhận giao gas và phục vụ sửa chữa, bán bếp gas trên địa bàn tỉnh ${site.province}. Bạn gọi điện để xác nhận cửa hàng có giao đến địa chỉ của mình hay không.</p>
     </div>
-    <div class="callout callout--todo">
-      <p><strong>Ghi chú nội bộ:</strong> <span class="todo">TODO: xác nhận danh sách phường/xã/khu vực giao cụ thể</span></p>
+    <div class="callout">
       <p>Chưa có danh sách đã duyệt, nên trang này chỉ ghi cấp tỉnh ${site.province} — không liệt kê khu vực cụ thể.</p>
     </div>
   </div>
@@ -206,7 +204,6 @@ export default {
       <li>Website cũ: <a href="${site.legacyWebsite}" rel="noopener noreferrer">quanghuongdaklak.giucban.vn</a></li>
     </ul>
     <p style="margin-top:1.25rem">${phoneList()}</p>
-    <p><span class="todo">TODO — bổ sung năm thành lập, chứng nhận, chính sách… chỉ sau khi chủ cửa hàng xác nhận.</span></p>
   </div>
 </section>
 
@@ -246,8 +243,8 @@ export default {
       <dl class="nap">
         <div class="nap__row"><dt>Tên</dt><dd>${site.name}</dd></div>
         <div class="nap__row"><dt>Khu vực</dt><dd>${site.province}</dd></div>
-        <div class="nap__row"><dt>Địa chỉ</dt><dd><span class="todo">TODO — điền địa chỉ cửa hàng (khớp Google Business Profile)</span></dd></div>
-        <div class="nap__row"><dt>Giờ mở cửa</dt><dd><span class="todo">TODO — điền giờ mở cửa đã xác nhận</span></dd></div>
+        <div class="nap__row"><dt>Địa chỉ</dt><dd>${site.address}</dd></div>
+        <div class="nap__row"><dt>Giờ mở cửa</dt><dd>${site.openingHours}</dd></div>
       </dl>
     </div>
   </div>

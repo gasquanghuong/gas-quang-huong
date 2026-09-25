@@ -28,7 +28,7 @@ export default {
         ${phoneList()}
         <p class="lead">Bạn đang cần đổi bình gas, mua bếp gas và thiết bị gas hay nhờ kiểm tra bếp? Cứ gọi, cửa hàng sẽ tư vấn trực tiếp qua điện thoại.</p>
       </div>
-      <div class="callout callout--todo">TODO: giờ mở cửa (chưa xác nhận)</div>
+      <div class="callout"><p><strong>Giờ mở cửa:</strong> ${site.openingHours}</p></div>
     </div>
   </div>
 </section>
@@ -42,7 +42,7 @@ export default {
     <div class="nap">
       <div class="nap__row"><strong>Tên:</strong> ${site.name}</div>
       <div class="nap__row"><strong>Khu vực:</strong> ${site.province}</div>
-      <div class="nap__row"><strong>Địa chỉ:</strong> <span class="todo">TODO: điền địa chỉ cửa hàng (khớp Google Business Profile — NAP consistency)</span></div>
+      <div class="nap__row"><strong>Địa chỉ:</strong> ${site.address}</div>
       <div class="nap__row"><strong>Điện thoại:</strong> ${site.phones.map((p) => `<a href="tel:${p.tel}">${p.display}</a>`).join(' · ')}</div>
     </div>
   </div>

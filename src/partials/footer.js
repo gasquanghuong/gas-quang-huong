@@ -13,8 +13,8 @@ export function footer() {
     <div class="footer-col">
       <p class="footer-col__title">Liên hệ</p>
       ${phoneList()}
-      <p class="footer-note">Địa chỉ: <span class="todo">TODO — điền địa chỉ cửa hàng (khớp Google Business Profile)</span></p>
-      <p class="footer-note">Giờ mở cửa: <span class="todo">TODO — điền giờ mở cửa xác nhận</span></p>
+      <p class="footer-note">Địa chỉ: ${site.address}</p>
+      <p class="footer-note">Giờ mở cửa: ${site.openingHours}</p>
     </div>
     <div class="footer-col">
       <p class="footer-col__title">Dịch vụ</p>

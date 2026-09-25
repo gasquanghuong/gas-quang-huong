@@ -87,14 +87,12 @@ Các mục **TODO đang để trống, không tự bịa** — chỉ điền khi
 
 | TODO | Nơi điền |
 |---|---|
-| Địa chỉ cửa hàng | `site.config.js` → `address` |
-| Giờ mở cửa | `site.config.js` → `openingHours` |
-| Link Google Maps (Place URL) | `site.config.js` → `googleMapsUrl` |
-| Tọa độ (nếu có) | `site.config.js` → `latitude` / `longitude` |
 | Ảnh OG 1200×630 | `site.config.js` → `ogImage` |
 | Ảnh thật cửa hàng/hero | thay `.hero__figure` trong `src/pages/home.js` |
-| Khu vực giao cụ thể (phường/xã) |Tìm trong nội dung các trang → tìm `TODO` |
-| Bảng giá, danh sách bếp đang bán | tìm `TODO` trong `src/pages/` |
+| Khu vực giao cụ thể (phường/xã) | chưa có dữ liệu — hỏi chủ cửa hàng trước khi thêm |
+| Bảng giá, danh sách bếp đang bán | chưa có dữ liệu — hỏi chủ cửa hàng trước khi thêm |
+
+> Đã xác minh qua Google Maps (không còn TODO): **địa chỉ** `147 Trần Hưng Đạo, Krông Pắc, Đắk Lắk 632700`, **giờ mở cửa** `Mở cửa cả ngày (thứ 2 – chủ nhật)`, link Google Maps + tọa độ trong `site.config.js`.
 
 > NAP consistency: **tên + số điện thoại + địa chỉ** phải khớp Google Business Profile. Nếu đổi số/sửa tên, cập nhật cả ở Google Business Profile.
 
@@ -126,7 +124,7 @@ Hiện tại **không dùng ảnh nào** (tránh ảnh giả). Khi có ảnh th�
 - [ ] Build local không lỗi: `node build.js` → mở `node build.js --serve` kiểm tra 5 trang
 - [ ] 3 số điện thoại đúng, nút `tel:` bấm gọi được trên điện thoại
 - [ ] Kiểm tra mobile: menu mở được, thanh CTA dưới cùng không che nội dung cuối
-- [ ] Điền TODO: địa chỉ, giờ mở cửa, link Google Maps (chỉ thông tin CHỨNG MINH được)
+- [x] Điền địa chỉ, giờ mở cửa, link Google Maps (đã xác minh qua Google Maps)
 - [ ] Thay ảnh placeholder bằng ảnh thật cửa hàng (nếu có)
 - [ ] GitHub Pages source = GitHub Actions, workflow deploy xanh
 - [ ] Mở website thật, kiểm tra: title, mô tả, link nội bộ, không có link gãy

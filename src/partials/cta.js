@@ -19,8 +19,7 @@ export function phoneList(cls = 'phone-list') {
 }
 
 /**
- * Nút mở Google Maps.
- * TODO: điền site.googleMapsUrl trong site.config.js (lấy từ Google Business Profile).
+ * Nút mở Google Maps — dùng site.googleMapsUrl (đã xác minh).
  * Khi chưa có, nút chuyển về trang Liên hệ (không tự bịa tọa độ/địa điểm).
  */
 export function mapsBtn(label = 'Xem bản đồ', { cls = 'btn btn--outline' } = {}) {

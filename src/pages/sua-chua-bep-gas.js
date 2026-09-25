@@ -100,7 +100,7 @@ export default {
       <div class="step">
         <span class="step__num">3</span>
         <h3 class="step__title">Thông báo lỗi và phương án</h3>
-        <p class="step__text">Cửa hàng nêu rõ lỗi phát hiện được và phương án xử lý, bao gồm việc thay thế bộ phận phù hợp với model bếp đang dùng. <span class="todo">TODO: xác nhận có nhận sửa tận nơi hay chỉ tại cửa hàng</span></p>
+        <p class="step__text">Cửa hàng nêu rõ lỗi phát hiện được và phương án xử lý, bao gồm việc thay thế bộ phận phù hợp với model bếp đang dùng.</p>
       </div>
       <div class="step">
         <span class="step__num">4</span>

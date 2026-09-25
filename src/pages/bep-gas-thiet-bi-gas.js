@@ -45,7 +45,6 @@ export default {
         <p class="card__text">Bếp có tháo rời kiềng, khay hứng dầu hay không quyết định việc lau rửa nhanh hay chậm. Bếp hay bị tràn thức ăn thì càng nên chọn loại ít mối nối, ít khe kẽ.</p>
       </div>
     </div>
-    <div class="callout callout--todo">TODO: danh sách bếp đang bán + bảng giá khi chủ cửa hàng cung cấp</div>
   </div>
 </section>
 
@@ -105,7 +104,6 @@ export default {
         <p class="card__text">Van gas, dây dẫn, gioăng nối và các chi tiết nhỏ đi kèm đều thuộc nhóm phụ kiện thường xuyên phải thay. Nên hỏi trước cửa hàng về loại đang có sẵn trước khi ghé lấy.</p>
       </div>
     </div>
-    <div class="callout callout--todo">TODO: danh mục phụ kiện thực tế đang bày bán (khi chủ cửa hàng cung cấp)</div>
     <p>Nếu bếp đang dùng có vấn đề, hãy xem <a href="${url('/sua-chua-bep-gas/')}">sửa chữa bếp gas</a> hoặc gọi nhờ kiểm tra.</p>
   </div>
 </section>

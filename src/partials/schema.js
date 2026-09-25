@@ -11,11 +11,11 @@ export function localBusinessJsonLd() {
     telephone: site.phones.map((p) => `+84${p.tel.slice(1)}`),
     description: `${site.name} — đại lý gas, giao gas tận nhà, sửa chữa bếp gas và bán bếp gas, thiết bị gas tại ${site.province}.`,
     areaServed: { '@type': 'Place', name: site.province },
-    // TODO: chỉ thêm các trường sau khi chủ cửa hàng xác nhận dữ liệu:
-    // address, geo, openingHoursSpecification, image, priceRange, sameAs
+    // TODO(còn thiếu, thêm khi chủ cửa hàng xác nhận): image, priceRange, sameAs
+    // và openingHoursSpecification chi tiết (giờ đang ghi dạng chuỗi mở)
   };
 
-  if (site.address) data.address = site.address; // TODO: chuyển sang PostalAddress chi tiết khi có địa chỉ đầy đủ
+  if (site.address) data.address = site.address; // TODO: chuyển sang PostalAddress chi tiết nếu Google yêu cầu
   if (site.openingHours) data.openingHours = site.openingHours;
   if (site.latitude != null && site.longitude != null) {
     data.geo = { '@type': 'GeoCoordinates', latitude: site.latitude, longitude: site.longitude };
