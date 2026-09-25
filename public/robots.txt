@@ -1,0 +1,6 @@
+# robots.txt — https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt
+User-agent: *
+Allow: /
+
+# Sitemap (địa chỉ tự cập nhật theo site.config.js khi build)
+Sitemap: __SITEMAP__

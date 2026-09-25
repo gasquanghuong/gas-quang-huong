@@ -1,0 +1,11 @@
+{
+  "name": "gas-quang-huong",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Website tĩnh SEO Local cho Đại lý Gas Quang Hương (GitHub Pages)",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node build.js --serve"
+  }
+}
